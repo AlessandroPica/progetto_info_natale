@@ -6,9 +6,9 @@ public class GestoreSkipass {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        boolean inEsecuzione = true;
+        boolean inEsecuzione;
 
-        while (inEsecuzione) {
+        do {
             System.out.println("\n--- Menu Principale ---");
             System.out.println("1. Calcola e Acquista Skipass");
             System.out.println("2. Visualizza Skipass Acquistati");
@@ -99,9 +99,10 @@ public class GestoreSkipass {
 
                 default:
                     System.out.println("Opzione non valida. Riprova.");
+                    inEsecuzione = true;
                     break;
             }
-        }
+        } while (inEsecuzione);
     }
 
     private static Skipass calcolaSkipass(String nome, int eta, String stagione, int giorni) {
