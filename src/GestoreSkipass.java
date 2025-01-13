@@ -6,7 +6,7 @@ public class GestoreSkipass {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        boolean inEsecuzione;
+        boolean inEsecuzione = false;
 
         do {
             System.out.println("\n--- Menu Principale ---");
