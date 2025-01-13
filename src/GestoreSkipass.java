@@ -6,7 +6,7 @@ public class GestoreSkipass {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        boolean inEsecuzione = false;
+        boolean inEsecuzione = true;
 
         do {
             System.out.println("\n--- Menu Principale ---");
@@ -99,7 +99,7 @@ public class GestoreSkipass {
 
                 default:
                     System.out.println("Opzione non valida. Riprova.");
-                    inEsecuzione = true;
+                    inEsecuzione = false;
                     break;
             }
         } while (inEsecuzione);
