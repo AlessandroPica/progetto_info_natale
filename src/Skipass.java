@@ -1,4 +1,3 @@
-
 public class Skipass {
     protected String nome;
     protected int eta;
@@ -30,7 +29,12 @@ public class Skipass {
     }
 
     public String toString() {
-        return String.format("Nome: %s, Età: %d, Stagione: %s, Giorni: %d, Costo: %.2f€",
-                nome, eta, stagione, giorni, costo);
+        return "Skipass{" +
+                "nome='" + nome + '\'' +
+                ", eta=" + eta +
+                ", stagione='" + stagione + '\'' +
+                ", giorni=" + giorni +
+                ", costo=" + costo +
+                '}';
     }
 }

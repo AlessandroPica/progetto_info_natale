@@ -1,4 +1,3 @@
-
 public class SkipassBambino extends Skipass {
     public SkipassBambino(String nome, int eta, String stagione, int giorni) {
         super(nome, eta, stagione, giorni);
