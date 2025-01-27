@@ -39,7 +39,7 @@ public class GestoreSkipass {
                     scanner.nextLine();
 
                     Skipass skipass = arraySkipass.calcolaSkipass(nome, eta, stagione, giorni);
-                    System.out.printf("Il costo dello skipass è: %.2f€\n", skipass.costo);
+                    System.out.printf("Il costo dello skipass è: %.2f€\n", skipass.getCosto());
                     System.out.print("Confermi l'acquisto? (s/n): ");
                     String conferma = scanner.nextLine();
 

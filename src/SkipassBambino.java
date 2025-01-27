@@ -3,9 +3,9 @@ public class SkipassBambino extends Skipass {
         super(nome, eta, stagione, giorni);
     }
 
-    protected double calcolaCosto() {
-        double tariffaBase = (stagione.equalsIgnoreCase("Alta")) ? 20 : 15;
-        double totale = tariffaBase * giorni * 0.5; // Sconto 50% per bambini
-        return applicaSconto(totale, giorni);
+    public double calcolaCosto() {
+        double tariffaBase = (getStagione().equalsIgnoreCase("Alta")) ? 20 : 15;
+        double totale = tariffaBase * getGiorni() * 0.5; // Sconto 50% per bambini
+        return applicaSconto(totale, getGiorni());
     }
 }

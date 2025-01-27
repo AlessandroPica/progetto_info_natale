@@ -32,7 +32,7 @@ public class ArraySkipass {
     public String eliminaSkipass(int numero) {
         if (numero > 0 && numero <= skipassAcquistati.size()) {
             Skipass rimosso = skipassAcquistati.remove(numero - 1);
-            return String.format("Skipass di %s eliminato con successo!", rimosso.nome);
+            return String.format("Skipass di %s eliminato con successo!", rimosso.getNome());
         } else {
             return "Numero non valido. Operazione annullata.";
         }
@@ -51,9 +51,9 @@ public class ArraySkipass {
                 Skipass anziano = new SkipassAnziano("Esempio", 65, stagione, giorni);
 
                 listino.add(String.format("  %d giorni:", giorni));
-                listino.add(String.format("    Bambini: %.2f€", bambino.costo));
-                listino.add(String.format("    Adulti: %.2f€", adulto.costo));
-                listino.add(String.format("    Anziani: %.2f€", anziano.costo));
+                listino.add(String.format("    Bambini: %.2f€", bambino.getCosto()));
+                listino.add(String.format("    Adulti: %.2f€", adulto.getCosto()));
+                listino.add(String.format("    Anziani: %.2f€", anziano.getCosto()));
             }
         }
         return listino.toArray(new String[0]);
@@ -62,7 +62,7 @@ public class ArraySkipass {
     public double calcolaCostoTotale() {
         double totale = 0;
         for (Skipass skipass : skipassAcquistati) {
-            totale += skipass.costo;
+            totale += skipass.getCosto();
         }
         return totale;
     }

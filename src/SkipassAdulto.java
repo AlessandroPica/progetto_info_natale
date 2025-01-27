@@ -3,9 +3,9 @@ public class SkipassAdulto extends Skipass {
         super(nome, eta, stagione, giorni);
     }
 
-    protected double calcolaCosto() {
-        double tariffaBase = (stagione.equalsIgnoreCase("Alta")) ? 40 : 30;
-        double totale = tariffaBase * giorni;
-        return applicaSconto(totale, giorni);
+    public double calcolaCosto() {
+        double tariffaBase = (getStagione().equalsIgnoreCase("Alta")) ? 40 : 30;
+        double totale = tariffaBase * getGiorni();
+        return applicaSconto(totale, getGiorni());
     }
 }
